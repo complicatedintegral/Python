@@ -1,0 +1,100 @@
+my token : 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
+
+Entire git procedure:
+
+gauth@Gautham_Book4 MINGW64 ~/OneDrive/Desktop/Python
+$ git init
+Initialized empty Git repository in C:/Users/gauth/OneDrive/Desktop/Python/.git/
+
+gauth@Gautham_Book4 MINGW64 ~/OneDrive/Desktop/Python (main)
+$ ls -al
+total 25
+drwxr-xr-x 1 gauth 197609    0 Jan 27 15:37 ./
+drwxr-xr-x 1 gauth 197609    0 Jan 20 11:19 ../
+drwxr-xr-x 1 gauth 197609    0 Jan 27 15:37 .git/
+-rw-r--r-- 1 gauth 197609 6497 Jan 27 14:56 PythonBasics.ipynb
+-rw-r--r-- 1 gauth 197609   54 Jan 27 13:05 demo.py
+
+gauth@Gautham_Book4 MINGW64 ~/OneDrive/Desktop/Python (main)
+$ git status
+On branch main
+
+No commits yet
+
+Untracked files:
+  (use "git add <file>..." to include in what will be committed)
+        PythonBasics.ipynb
+        demo.py
+
+nothing added to commit but untracked files present (use "git add" to track)
+
+gauth@Gautham_Book4 MINGW64 ~/OneDrive/Desktop/Python (main)
+$ git add .
+warning: in the working copy of 'PythonBasics.ipynb', LF will be replaced by CRLF the next time Git touches it
+
+gauth@Gautham_Book4 MINGW64 ~/OneDrive/Desktop/Python (main)
+$ git status
+On branch main
+
+No commits yet
+
+Changes to be committed:
+  (use "git rm --cached <file>..." to unstage)
+        new file:   PythonBasics.ipynb
+        new file:   demo.py
+
+
+gauth@Gautham_Book4 MINGW64 ~/OneDrive/Desktop/Python (main)
+$ git commit -m "First commit"
+Author identity unknown
+
+*** Please tell me who you are.
+
+Run
+
+  git config --global user.email "you@example.com"
+  git config --global user.name "Your Name"
+
+to set your account's default identity.
+Omit --global to set the identity only in this repository.
+
+fatal: unable to auto-detect email address (got 'gauth@Gautham_Book4.(none)')
+
+gauth@Gautham_Book4 MINGW64 ~/OneDrive/Desktop/Python (main)
+$ ^C
+
+gauth@Gautham_Book4 MINGW64 ~/OneDrive/Desktop/Python (main)
+$ git config --global user.email "gautham.dhinakar@gmail.com"
+
+gauth@Gautham_Book4 MINGW64 ~/OneDrive/Desktop/Python (main)
+$ git config --global user.name "Gautham Dhinakar"
+
+gauth@Gautham_Book4 MINGW64 ~/OneDrive/Desktop/Python (main)
+$ git commit -m "First commit"
+[main (root-commit) e997db1] First commit
+ 2 files changed, 288 insertions(+)
+ create mode 100644 PythonBasics.ipynb
+ create mode 100644 demo.py
+
+gauth@Gautham_Book4 MINGW64 ~/OneDrive/Desktop/Python (main)
+$ git status
+On branch main
+nothing to commit, working tree clean
+
+gauth@Gautham_Book4 MINGW64 ~/OneDrive/Desktop/Python (main)
+$ git remote add origin https://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@github.com/complicatedintegral/Python
+
+gauth@Gautham_Book4 MINGW64 ~/OneDrive/Desktop/Python (main)
+$ git push -u origin main
+Enumerating objects: 4, done.
+Counting objects: 100% (4/4), done.
+Delta compression using up to 12 threads
+Compressing objects: 100% (4/4), done.
+Writing objects: 100% (4/4), 2.17 KiB | 2.17 MiB/s, done.
+Total 4 (delta 0), reused 0 (delta 0), pack-reused 0 (from 0)
+To https://github.com/complicatedintegral/Python
+ * [new branch]      main -> main
+branch 'main' set up to track 'origin/main'.
+
+ls : to view files in the folder
+code . : to open the folder in vs code
